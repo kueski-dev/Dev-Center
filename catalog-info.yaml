@@ -1,0 +1,45 @@
+# This manifesto is used by Backstage to register your service in the catalog
+# For detailed documentation about the different fields please check:
+# https://kueski.atlassian.net/wiki/spaces/TSDK/pages/2549186971/Backstage+service+information
+#
+# You can also check backstage main documentation:
+# https://backstage.io/docs/features/software-catalog/descriptor-format
+#
+# Just remember that the internal confluence documentation contains changes and
+# the conventions we support for these manifestos
+
+# Please replace all ocurrences of <***> with correct values
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dev-center
+  title: dev-center
+  #Description. Human readable description of service to be shown in Backstage
+  description: "Wiki repository for partners integrations"
+  supportlvl: standard #[deprecated, legacy, standard]
+  visibility: private
+  maintainer: rody.guzman@kueski.com
+  type: documentation
+  owner: partners-integrations
+  root: KueskiPay Integrations
+
+  labels:
+    has_kueski_yaml: "false"
+    is_critical: "true"
+  tags:
+    - wiki
+    - documentation
+spec:
+  type: documentation
+  #Owner. Team that has the authority and capability to develop and maintain it.
+  #Group: <GROUP_NAME> -> owner: platform (must be registered backstage team)
+  #To know how to add a new team to backstage, check the FAQs section.
+  #https://kueski.atlassian.net/wiki/spaces/TSDK/pages/2632941631/ \
+  #Backstage+User+Doc#Frequently-Asked-Questions-(FAQs)
+  owner: partners-integrations
+  lifecycle: development
+  domain: KueskiPay Integrations
+  dependsOn: []
+  providesApis: []
+  consumesApis: []
